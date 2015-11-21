@@ -1,12 +1,13 @@
 # This script was developed to automate the process of digitizing line features
 #   that originate at each point in a large point grid, and extend radially
-#   for 10000 meters, at 5° intervals
+#   for 650000 meters (an arbitrarily large number that will be clipped later),
+#   at 5° intervals; totaling 72 line features for each point in the grid.
 
 import arcpy
 from arcpy import da # Data Access Module for interacting with features
 from math import radians, sin, cos # Trig functions for calculating offsets
 
-# Set data references using double backslashes
+# Set data references using double backslashes on a local drive
 fetchGrid = "D:\\GIS Projects\\NWS - Fetch Vectors\\data\\Fetch_Vectors.mdb\\FetchVectorGrid_2500SqM"
 fetchVectors = "D:\\GIS Projects\\NWS - Fetch Vectors\\data\\Fetch_Vectors.mdb\\test_data\\TestLineGeometry"
 fields = ["FK_FetchVectorID", "Bearing", "SHAPE@"] # Fields to search
