@@ -8,8 +8,8 @@ from arcpy import da # Data Access Module for interacting with features
 from math import radians, sin, cos # Trig functions for calculating offsets
 
 # Set data references using double backslashes on a local drive
-fetchGrid = "D:\\GIS Projects\\NWS - Fetch Vectors\\data\\Fetch_Vectors.mdb\\FetchVectorGrid_2500SqM"
-fetchVectors = "D:\\GIS Projects\\NWS - Fetch Vectors\\data\\Fetch_Vectors.mdb\\test_data\\TestLineGeometry"
+fetchGrid = "D:\\GIS Projects\\ProjectDirectory\\data\\ProjectData.mdb\\Grid_2500SqM"
+fetchVectors = "D:\\GIS Projects\\ProjectDirectory\\data\\ProjectData.mdb\\\\LineGeometry"
 fields = ["FK_FetchVectorID", "Bearing", "SHAPE@"] # Fields to search
 vectorDistance = 650000
 
